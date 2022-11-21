@@ -1,0 +1,24 @@
+.header-container {
+  font-family: "Segoe UI";
+  height: 12vh;
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container .text {
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.header-container .update-btn {
+  width: 16vw;
+  height: 6vh;
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}

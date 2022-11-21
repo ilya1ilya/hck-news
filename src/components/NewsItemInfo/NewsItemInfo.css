@@ -1,0 +1,31 @@
+.item-container {
+  height: 100vh;
+  background-color: #f8f7fd;
+}
+
+.info-container {
+  width: 50vw;
+  height: 100%;
+  margin: auto;
+  background-color: white;
+  font-family: "Segoe UI";
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container div {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.bottom-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-container span,
+.bottom-info span {
+    font-weight:  bold;
+}
