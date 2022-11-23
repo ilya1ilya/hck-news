@@ -34,14 +34,25 @@ const Comment = ({ by, text, kids }: CommentProps) => {
 
   const handleClick = () => {
     setShowMore(!showMore);
-  }
+  };
 
   return (
     <div className="comment-container">
-      <div>{by}</div>
-      <div>{text}</div>
-      {nestedComments.length > 0 && <button onClick={handleClick} >Show More</button>}
-      {nestedComments.length > 0 && showMore &&
+      <div className="by">
+        <span>{by}</span>
+      </div>
+      <div className="text">
+        <span>{text}</span>
+      </div>
+
+      {nestedComments.length > 0 && (
+        <button className="show-btn" onClick={handleClick}>
+          Show More
+        </button>
+      )}
+
+      {nestedComments.length > 0 &&
+        showMore &&
         nestedComments.map((comment) => {
           return (
             <div key={comment.id} className="nested-comment-container">
