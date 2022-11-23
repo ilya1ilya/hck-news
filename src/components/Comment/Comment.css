@@ -1,0 +1,11 @@
+.comment-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-left: 1px black solid;
+}
+
+.nested-comment-container {
+  background-color: yellow;
+}

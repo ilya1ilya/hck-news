@@ -16,6 +16,6 @@ export const fetchNewsItem = createAsyncThunk<
   }
 
   const itemNewsInfo = await response.json();
-
+  
   return itemNewsInfo;
 });

@@ -1,0 +1,12 @@
+.comments-group-container {
+  background-color: #f8f7fd;
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+}
+
+.comments-section {
+  background-color: aqua;
+  width: 100%;
+  margin: auto;
+}

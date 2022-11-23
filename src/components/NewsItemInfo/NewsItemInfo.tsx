@@ -1,3 +1,4 @@
+import INewsItem from "../../models/INewsItem";
 import "./NewsItemInfo.css";
 
 const convertTime = (time: number) => {
@@ -5,22 +6,12 @@ const convertTime = (time: number) => {
 };
 
 type NewsItemProps = {
-  id: number;
-  by: string;
-  kids?: number[];
-  time: number;
-  title: string;
-  url: string;
+  info: INewsItem;
 };
 
-const NewsItemInfo = ({
-  id,
-  by,
-  kids,
-  time,
-  title,
-  url = "link is not provided",
-}: NewsItemProps) => {
+const NewsItemInfo = ({ info }: NewsItemProps) => {
+  let { title, url = 'no link provided', by, kids, time } = info;
+
   return (
     <div className="item-container">
       <div className="info-container">
