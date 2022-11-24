@@ -22,8 +22,6 @@ const CommentsGroup = ({ kids }: CommentsGroupProps) => {
     }
   }, [dispatch, kids]);
 
-  console.log("root Comments:", rootComments);
-
   return (
     <div className="comments-group-container">
       {loading && <Loader />}

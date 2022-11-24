@@ -13,8 +13,6 @@ const NewsPage = () => {
 
   const { id } = useParams();
 
-  console.log(id);
-
   useEffect(() => {
     dispatch(fetchNewsItem(id));
   }, [dispatch, id]);

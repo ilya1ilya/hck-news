@@ -18,8 +18,6 @@ const Feed = () => {
     dispatch(fetchLatestNews());
   }, [dispatch]);
 
-  console.log(latestNews);
-
   return (
     <>
       {loading && <Loader />}

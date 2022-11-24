@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import INewsItem from "../../models/INewsItem";
 import "./NewsItemInfo.css";
 
@@ -10,7 +12,7 @@ type NewsItemProps = {
 };
 
 const NewsItemInfo = ({ info }: NewsItemProps) => {
-  let { title, url = 'no link provided', by, kids, time } = info;
+  let { title, url = "no link provided", by, time, descendants } = info;
 
   return (
     <div className="item-container">
@@ -24,12 +26,20 @@ const NewsItemInfo = ({ info }: NewsItemProps) => {
             <span>By:</span> {by}
           </div>
           <div>
-            <span>Comments:</span> {kids ? kids.length : 0}
+            <span>Comments:</span> {descendants}
           </div>
           <div>
             <span>Date:</span> {convertTime(time)}
           </div>
         </div>
+      </div>
+      <div className="buttons-container">
+        <Link to="/">
+          <button>Back</button>
+        </Link>
+        <button onClick={() => window.location.reload()}>
+          Refresh Comments
+        </button>
       </div>
     </div>
   );
